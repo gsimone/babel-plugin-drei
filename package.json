@@ -1,0 +1,18 @@
+{
+  "name": "babel-plugin-drei",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gianmarco Simone <gsimone@hey.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "@babel/types": "^7.11.0"
+  }
+}
