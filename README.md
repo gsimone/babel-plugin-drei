@@ -12,6 +12,11 @@ import Sphere from "drei/lib/Sphere"
 
 ### Usage
 
+```bash
+yarn add babel-plugin-drei
+```
+
+Add the plugin to your babel config
 ```json
 {
   "plugins": [
