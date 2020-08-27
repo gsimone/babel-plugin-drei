@@ -9,14 +9,16 @@ describe("cherry-picked modular builds", function () {
   it(`Should work`, () => {
     const expected = 
       `
-        import Shadow from "drei/lib/Shadow";
-        import Box from "drei/lib/Box";
+        import Shadow from "drei/dist/Shadow";
+        import Box from "drei/dist/Box";
+        import { Bloom } from 'react-postprocessing';
         import Test from "react-three-fiber";
       `;
 
     const actual = transformSync(
       `
         import { Shadow, Box } from "drei/macro"
+        import { Bloom } from 'react-postprocessing'
         import Test from "react-three-fiber"
       `,
       {
@@ -28,7 +30,7 @@ describe("cherry-picked modular builds", function () {
   });
 
   it(`Should work with renamed imports`, () => {
-    const expected = `import Foo from "drei/lib/Box";`;
+    const expected = `import Foo from "drei/dist/Box";`;
 
     const actual = transformSync(
       `import { Box as Foo } from "drei/macro"`,
