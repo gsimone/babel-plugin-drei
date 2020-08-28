@@ -24,7 +24,7 @@ module.exports = function () {
           // transform this:
           //      import { Grid as gird } from 'drei';
           // into this:
-          //      import gird from 'drei/lib/Grid';
+          //      import Grid from 'drei/lib/Grid';
           const importName = `drei/dist/${memberImport.imported.name}`;
 
           if (source === "drei/macro") {
